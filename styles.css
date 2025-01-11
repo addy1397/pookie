@@ -1,0 +1,69 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-top: 20px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+    width: 300px;
+    margin: 20px auto;
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%; /* Makes the button circular */
+    border: none;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#yesButton {
+    background-color: #ff6b6b; /* Valentine's Day pink */
+    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+    color: d3d3d3;
+}
+#yesButton:hover {
+    background-color: #ff4d4d; /* Slightly darker on hover */
+    transform: scale(1.1); /* Enlarges on hover */
+    color: d3d3d3;
+}
+
+#noButton {
+    background-color: #d3d3d3; /* Neutral gray for contrast */
+    box-shadow: 0 4px 8px rgba(211, 211, 211, 0.3);  
+    color: ff6b6b;
+}
+
+#noButton:hover {
+    background-color: #bcbcbc; /* Slightly darker on hover */
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    color: ff6b6b;
+}
