@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get the 'id' parameter, decode it, and set it as the hero image source
     const encodedId = getUrlParameter('id');
+    console.log(encodedId)
+
     if (encodedId) {
         try {
             const decodedId = atob(encodedId);
