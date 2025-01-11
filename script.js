@@ -11,16 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get the 'id' parameter, decode it, and set it as the hero image source
     const encodedId = getUrlParameter('id');
-    console.log(encodedId)
-
     if (encodedId) {
         try {
-            const decodedId = atob(encodedId);
-            heroImage.src = decodedId;
-        } catch (e) {
+            decodedId = atob(encodedId)
+            greeting.innerHTML = `Hey ${decodedId}!!`
+        }
+        catch (e) {
             console.error('Invalid base64 string:', e);
         }
     }
+
 
     noButton.addEventListener('mouseover', () => {
         const x = Math.random() * (window.innerWidth - noButton.clientWidth);
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     yesButton.addEventListener('click', () => {
         document.body.innerHTML = `
             <div class="hero">
-                <h1>Thank you Pookie</h1>
+                <h1>Thank you ${decodedId}</h1>
                 <img src="cutebear2.gif" alt="Thank You">
             </div>
         `;
