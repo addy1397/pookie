@@ -67,3 +67,24 @@ button {
     transform: scale(1.05); /* Slightly enlarges on hover */
     color: ff6b6b;
 }
+
+
+.payment-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+.payment-button:hover {
+    transform: scale(1.1);
+}
+

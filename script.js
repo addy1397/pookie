@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const defaultId = 'Pookie';
     const noButton = document.getElementById('noButton');
     const yesButton = document.getElementById('yesButton');
     const heroImage = document.querySelector('.hero-image');
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get the 'id' parameter, decode it, and set it as the hero image source
     const encodedId = getUrlParameter('id');
-    decodedId = "Pookie" 
+    decodedId = defaultId; 
     if (encodedId) {
         try {
             decodedId = atob(encodedId)
@@ -39,4 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
     });
+
+    if (decodedId == defaultId) {
+        const paymentButton = document.getElementById('paymentButton');
+        paymentButton.setAttribute('title', 'Make this page yours');
+        paymentButton.addEventListener('click', () => {
+            window.open('https://rzp.io/rzp/crWAP3y5', '_blank');
+        });
+    }
 }); 
