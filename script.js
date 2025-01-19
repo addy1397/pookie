@@ -47,5 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         paymentButton.addEventListener('click', () => {
             window.open('https://rzp.io/rzp/crWAP3y5', '_blank');
         });
+    } else {
+        paymentButton.style.display = 'none';
     }
 }); 
