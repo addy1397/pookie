@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
 body {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -6,8 +12,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: url('background.png') no-repeat center center fixed;
-    background-size: cover;
     flex-direction: column;
 }
 
@@ -43,6 +47,10 @@ button {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;
+    -webkit-appearance: none; /* Remove default styling on iOS */
+    appearance: none; /* Remove default styling on other mobile browsers */
+    color: inherit; /* Ensure button text color is inherited */
+    text-decoration: none; /* Remove any text decoration */
 }
 
 #yesButton {
@@ -88,3 +96,43 @@ button {
     transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero-image {
+        width: 200px;
+    }
+
+    .buttons {
+        flex-direction: row; /* Ensure buttons are side by side */
+        gap: 10px;
+        margin-top: 20px; /* Add margin to position below the title */
+        align-items: center; /* Center align the buttons */
+        justify-content: center; /* Center align the buttons */
+    }
+
+    button {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+    }
+
+    .payment-button {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
